@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "builds": [
+    { "src": "src/lambda.js", "use": "@now/node" },
+    { "src": "views/*", "use": "@now/static" }
+  ],
+  "routes": [
+    { "src": "/probot", "dest": "/src/lambda.js" },
+    { "src": "/deploy", "dest": "/src/lambda.js", "methods": ["POST"] },
+    { "src": "/setup", "dest": "/views/setup.html" },
+    { "src": "/success", "dest": "/views/success.html" }
+  ]
+}

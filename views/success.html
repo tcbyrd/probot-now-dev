@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" class="height-full">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>
+      Built with Probot
+    </title>
+    <link
+      rel="icon"
+      href="https://raw.githubusercontent.com/probot/probot/master/static/probot-head.png"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Primer/11.0.0/build.css"
+    />
+  </head>
+  <body class="height-full bg-gray-light">
+    <div
+      class="d-flex flex-column flex-justify-center flex-items-center text-center height-full"
+    >
+      <img
+        src="https://raw.githubusercontent.com/probot/probot/master/static/probot-head.png"
+        alt="Probot Logo"
+        width="100"
+        class="mb-6"
+      />
+      <div class="box-shadow rounded-2 border p-6 bg-white">
+        <div class="text-center">
+          <h2>Success!</h2>
+          <p>
+            Your app is now registered on GitHub! <br />
+            <br />
+            To deploy a GitHub App, your Now account needs these secrets that
+            were generated as part of the previous step:
+          </p>
+          <form action="/deploy" method="post" target="_blank">
+            <input
+              class="form-control input-monospace"
+              type="number"
+              name="APP_ID"
+              id="APP_ID"
+              placeholder="APP_ID"
+            /><br />
+            <input
+              class="form-control input-monospace"
+              type="text"
+              name="WEBHOOK_SECRET"
+              id="WEBHOOK_SECRET"
+              placeholder="WEBHOOK_SECRET"
+            /><br />
+            <input
+              class="form-control input-monospace"
+              type="text"
+              name="PRIVATE_KEY"
+              id="PRIVATE_KEY"
+              placeholder="PRIVATE_KEY"
+            /><br />
+            Provide a Zeit
+            <a href="https://zeit.co/account/tokens" target="_blank"
+              >account token</a
+            >
+            and your app will automatically be deployed with these secrets!
+            <br />
+            <input
+              class="form-control input-monospace"
+              type="text"
+              name="ZEIT_TOKEN"
+              id="ZEIT_TOKEN"
+              placeholder="ZEIT_TOKEN"
+            /><br />
+            <button class="btn btn-success" type="submit">
+              Deploy to Now▲
+            </button>
+          </form>
+          <br />
+        </div>
+      </div>
+
+      <div class="mt-4">
+        <h4 class="alt-h4 text-gray-light">Need help?</h4>
+        <div class="d-flex flex-justify-center mt-2">
+          <a href="https://probot.github.io/docs/" class="btn btn-outline mr-2"
+            >Documentation</a
+          >
+          <a
+            href="https://probot-slackin.herokuapp.com/"
+            class="btn btn-outline"
+            >Chat on Slack</a
+          >
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

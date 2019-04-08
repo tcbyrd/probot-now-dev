@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" class="height-full">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Setup Your App | Built with Probot</title>
+    <link
+      rel="icon"
+      href="https://raw.githubusercontent.com/probot/probot/master/static/probot-head.png"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Primer/11.0.0/build.css"
+    />
+  </head>
+  <body class="height-full bg-gray-light">
+    <div
+      class="d-flex flex-column flex-justify-center flex-items-center text-center height-full"
+    >
+      <img
+        src="https://raw.githubusercontent.com/probot/probot/master/static/probot-head.png"
+        alt="Probot Logo"
+        width="100"
+        class="mb-6"
+      />
+      <div class="box-shadow rounded-2 border p-6 bg-white">
+        <h1>
+          Welcome to your Probot App!
+        </h1>
+
+        <p>
+          Deploy and app to Now with
+          <a href="https://github.com/probot/probot">Probot</a>, a framework for
+          building GitHub Apps.
+        </p>
+
+        <div class="text-left mt-6">
+          <h2 class="alt-h3 mb-2">Getting Started</h2>
+
+          <p>
+            To deploy a GitHub App, your Now account needs secrets that are
+            <br />
+            generated when the app is created on GitHub. First sign in to the
+            <br />
+            Zeit account where you want these secrets to be stored and
+            <a href="https://zeit.co/account/tokens" target="_blank"
+              >create a token</a
+            >
+            <br />
+            Then use that in the registration form
+          </p>
+          <br />
+
+          <form action="{{ createAppUrl }}" method="post" target="_blank">
+            <button
+              class="btn btn-outline"
+              name="manifest"
+              id="manifest"
+              value="{{{ manifest }}}"
+            >
+              Register GitHub App
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div class="mt-4">
+        <h4 class="alt-h4 text-gray-light">Need help?</h4>
+        <div class="d-flex flex-justify-center mt-2">
+          <a href="https://probot.github.io/docs/" class="btn btn-outline mr-2"
+            >Documentation</a
+          >
+          <a
+            href="https://probot-slackin.herokuapp.com/"
+            class="btn btn-outline"
+            >Chat on Slack</a
+          >
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
